@@ -1,0 +1,6 @@
+.img-login{  background: rgba(0, 0, 0, .6); }
+
+@media (max-width: 767.98px){ 
+  .wrap { background: rgba(0, 0, 0, .4); }
+
+}
