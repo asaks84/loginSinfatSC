@@ -17,13 +17,24 @@ const mask = IMask(element, maskCPF);
 
 // background random
 (function randomBg(){
-  const bigSize = [
-                  "url('./static/bg/01.jpg')",
-                  "url('./static/bg/02.jpg')",
-                  "url('./static/bg/03.jpg')"
-                ];
+  const bigSize = {
+    1: {
+      url: "url('./static/bg/01.jpg')",
+      description: "whatever it is"
+      }, 
+    2: {
+      url: "url('./static/bg/02.jpg')",
+      description: "whatever it is"
+      },
+    3: {
+      url: "url('./static/bg/03.jpg')",
+      description: "whatever it is"
+      }
+  }
 
-  const num = bigSize.length;
-  const random = Math.floor(Math.random() * num) + 0;
-  document.querySelector('section').style.backgroundImage=bigSize[random];
+  const num = Object.keys(bigSize).length;
+  const random = Math.floor((Math.random() * num + 1));
+  document.querySelector('section').style.backgroundImage = bigSize[random].url;
+  document.querySelector('footer small').innerHTML = bigSize[random].description;
+  
 })();
