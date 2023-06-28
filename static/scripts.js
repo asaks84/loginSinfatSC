@@ -1,20 +1,3 @@
-// formatação campo CPF/CNPJ
-const element = document.querySelector('form #username');
-const maskCPF = {
-  mask: [
-    {
-      mask: '000.000.000-00',
-      max: 11
-    },
-    {
-      mask: '00.000.000/0000-00',
-      min: 12
-    }
-  ]
-  
-};
-const mask = IMask(element, maskCPF);
-
 // background random
 (function randomBg(){
   const bigSize = {
@@ -38,3 +21,20 @@ const mask = IMask(element, maskCPF);
   document.querySelector('footer small').innerHTML = bigSize[random].description;
   
 })();
+
+// formatação campo CPF/CNPJ
+const element = document.querySelector('form #username');
+const maskCPF = {
+  mask: [
+    {
+      mask: '000.000.000-00',
+      max: 11
+    },
+    {
+      mask: '00.000.000/0000-00',
+      min: 12
+    }
+  ]
+  
+};
+const mask = IMask(element, maskCPF);
